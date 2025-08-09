@@ -3,7 +3,8 @@ import { Button } from "@/components/ui/button";
 import { ParticleBackground } from "@/components/ParticleBackground";
 import { Scene3D } from "@/components/3D/Scene3D";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
-import heroImage from "@/assets/profile.jpg";
+import heroImage from "@/assets/hero-cosmic.jpg";
+import profilePic from '@/assets/profile.jpg';
 
 interface HeroPageProps {
   onNavigate: (page: string) => void;
@@ -49,7 +50,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cosmic-purple to-cosmic-blue p-1 animate-pulse-glow">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-cosmic-cyan to-cosmic-blue flex items-center justify-center text-4xl font-bold text-white">
                 <img
-                  src="./src/assets/profile.jpg"
+                  src={profilePic}
                   alt="Muthu krishnan"
                   className="rounded-full w-full h-full object-cover"
                 />
@@ -117,7 +118,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               </motion.div>
             </Button>
             <Button variant="glow" size="lg" asChild className="group">
-              <a href="./public/MyResume.pdf" target="_blank" rel="noopener noreferrer">
+              <a href="./src/assets/MyResume.pdf" target="_blank" rel="noopener noreferrer">
                 <Download className="group-hover:animate-bounce" />
                 Resume
               </a>
@@ -153,8 +154,8 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             ))}
           </motion.div>
 
-         
-         
+
+
         </motion.div>
       </div>
     </section>
