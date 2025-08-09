@@ -1,36 +1,34 @@
-import { motion } from 'framer-motion';
-import { Card } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
+import { motion } from "framer-motion";
+import { Card } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
 export const AboutPage = () => {
   const timeline = [
     {
-      year: '2024',
-      title: 'Senior Frontend Developer',
-      company: 'Tech Innovation Corp',
-      description: 'Leading frontend architecture for next-generation web applications',
+      year: "2024",
+      title: "Frontend Developer",
+      experience: "Fresher",
+      description:
+        "Leading frontend architecture for next-generation web applications",
     },
     {
-      year: '2022',
-      title: 'Full Stack Developer',
-      company: 'Digital Solutions Inc',
-      description: 'Built scalable web applications using React, Node.js, and cloud technologies',
-    },
-    {
-      year: '2020',
-      title: 'Junior Developer',
-      company: 'StartUp Ventures',
-      description: 'Started my journey in web development with a focus on user experience',
+      year: "2024",
+      title: "UI/UX Designer",
+      experience: "Fresher",
+      description:
+        "A UI/UX Developer blends creativity and technology to design visually appealing, user-friendly, and responsive interfaces.",
     },
   ];
 
   const interests = [
-    'Artificial Intelligence',
-    '3D Graphics',
-    'Web3 Technologies',
-    'Mobile Development',
-    'UI/UX Design',
-    'Open Source',
+    "3D Graphics",
+    "Web3 Technologies",
+    "Mobile App Design",
+    "UI/UX Design",
+    "Open Source",
+    "Web Design",
+    "Artificial Intelligence",
+    "Sports"
   ];
 
   return (
@@ -46,7 +44,8 @@ export const AboutPage = () => {
             About Me
           </h1>
           <p className="text-xl text-foreground-muted max-w-3xl mx-auto">
-            Passionate developer with a love for creating beautiful, functional, and user-centered digital experiences.
+            Passionate developer with a love for creating beautiful, functional,
+            and user-centered digital experiences.
           </p>
         </motion.div>
 
@@ -61,20 +60,21 @@ export const AboutPage = () => {
               <h2 className="text-2xl font-bold text-glow mb-6">My Journey</h2>
               <div className="space-y-4 text-foreground-secondary">
                 <p>
-                  Hello! I'm John, a passionate frontend developer with over 4 years of experience 
-                  creating digital experiences that users love. My journey started with curiosity 
-                  about how websites work, and it has evolved into a deep passion for crafting 
-                  beautiful, functional applications.
+                  A Motivated and detail-focused Computer Science Engineering
+                  graduate with strong skills in frontend development and UI/UX
+                  design.
+                </p>
+                 <p>
+                  Experienced in tools like Figma,Miro, and Penpot. Passionate
+                  about solving problems using both technical and creative
+                  approaches. Seeking opportunities to grow as a Frontend
+                  developer.
                 </p>
                 <p>
-                  I specialize in React, TypeScript, and modern web technologies, with a keen eye 
-                  for design and user experience. I believe that great software should not only 
-                  work flawlessly but also bring joy to those who use it.
+                  Proficient in HTML, CSS, and JavaScript; currently enhancing
+                  expertise in ReactJS and Python backend development(Learning).
                 </p>
-                <p>
-                  When I'm not coding, you can find me exploring new technologies, contributing to 
-                  open source projects, or experimenting with 3D graphics and animations.
-                </p>
+               
               </div>
             </Card>
           </motion.div>
@@ -86,7 +86,9 @@ export const AboutPage = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Card className="glass p-8 h-full">
-              <h2 className="text-2xl font-bold text-glow mb-6">Interests & Passions</h2>
+              <h2 className="text-2xl font-bold text-glow mb-6">
+                Interests & Passions
+              </h2>
               <div className="grid grid-cols-2 gap-3">
                 {interests.map((interest, index) => (
                   <motion.div
@@ -95,7 +97,10 @@ export const AboutPage = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.5, delay: 0.6 + index * 0.1 }}
                   >
-                    <Badge variant="secondary" className="w-full p-3 text-center cosmic-bg">
+                    <Badge
+                      variant="secondary"
+                      className="w-full p-3 text-center cosmic-bg"
+                    >
                       {interest}
                     </Badge>
                   </motion.div>
@@ -114,11 +119,11 @@ export const AboutPage = () => {
           <h2 className="text-3xl font-bold text-center gradient-text mb-12">
             Professional Timeline
           </h2>
-          
+
           <div className="relative">
             {/* Timeline Line */}
             <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-gradient-to-b from-cosmic-purple via-cosmic-blue to-cosmic-cyan"></div>
-            
+
             <div className="space-y-12">
               {timeline.map((item, index) => (
                 <motion.div
@@ -127,10 +132,14 @@ export const AboutPage = () => {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.8, delay: 0.8 + index * 0.2 }}
                   className={`flex items-center ${
-                    index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
                   }`}
                 >
-                  <div className={`lg:w-1/2 ${index % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8'}`}>
+                  <div
+                    className={`lg:w-1/2 ${
+                      index % 2 === 0 ? "lg:pr-8" : "lg:pl-8"
+                    }`}
+                  >
                     <Card className="glass p-6 hover-lift">
                       <div className="space-y-3">
                         <div className="flex items-center gap-3">
@@ -142,7 +151,7 @@ export const AboutPage = () => {
                           </h3>
                         </div>
                         <p className="text-lg font-semibold text-foreground-secondary">
-                          {item.company}
+                          {item.experience}
                         </p>
                         <p className="text-foreground-muted">
                           {item.description}
@@ -150,7 +159,7 @@ export const AboutPage = () => {
                       </div>
                     </Card>
                   </div>
-                  
+
                   <div className="lg:w-1/2 flex justify-center">
                     <div className="w-4 h-4 bg-primary rounded-full glow-primary relative z-10"></div>
                   </div>

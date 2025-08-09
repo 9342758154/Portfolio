@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
-import { Button } from '@/components/ui/button';
-import { ParticleBackground } from '@/components/ParticleBackground';
-import { Scene3D } from '@/components/3D/Scene3D';
-import { Download, Mail, Github, Linkedin } from 'lucide-react';
-import heroImage from '@/assets/hero-cosmic.jpg';
+import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
+import { ParticleBackground } from "@/components/ParticleBackground";
+import { Scene3D } from "@/components/3D/Scene3D";
+import { Download, Mail, Github, Linkedin } from "lucide-react";
+import heroImage from "@/assets/hero-cosmic.jpg";
 
 interface HeroPageProps {
   onNavigate: (page: string) => void;
@@ -13,9 +13,9 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       <ParticleBackground />
-      
+
       {/* Background Image with Overlay */}
-      <div 
+      <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       >
@@ -38,17 +38,21 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
           <motion.div
             initial={{ scale: 0, rotate: 180 }}
             animate={{ scale: 1, rotate: 0 }}
-            transition={{ 
-              type: "spring", 
-              damping: 15, 
+            transition={{
+              type: "spring",
+              damping: 10,
               stiffness: 100,
-              delay: 0.5 
+              delay: 0.5,
             }}
-            className="relative mx-auto w-32 h-32 md:w-40 md:h-40"
+            className="relative mx-auto w-32 h-32 md:w-60 md:h-80"
           >
             <div className="absolute inset-0 rounded-full bg-gradient-to-r from-cosmic-purple to-cosmic-blue p-1 animate-pulse-glow">
               <div className="w-full h-full rounded-full bg-gradient-to-br from-cosmic-cyan to-cosmic-blue flex items-center justify-center text-4xl font-bold text-white">
-                JD
+                <img
+                  src="./src/assets/profile.jpg"
+                  alt="Profile"
+                  className="rounded-full w-full h-full object-cover"
+                />
               </div>
             </div>
           </motion.div>
@@ -59,11 +63,11 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-4xl md:text-6xl lg:text-7xl font-bold gradient-text"
+              className="text-4xl md:text-6xl lg:text-6xl font-bold gradient-text"
             >
-              John Developer
+              Muthu Krishnan R
             </motion.h1>
-            
+
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -74,7 +78,8 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 Creative UI/UX Designer & Frontend Developer
               </h2>
               <p className="text-lg md:text-xl text-foreground-muted max-w-2xl mx-auto">
-                Crafting digital experiences with modern technologies and creative vision
+                Crafting digital experiences with modern technologies and
+                creative vision.
               </p>
             </motion.div>
           </div>
@@ -89,17 +94,17 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             <Button
               variant="hero"
               size="lg"
-              onClick={() => onNavigate('contact')}
+              onClick={() => onNavigate("contact")}
               className="group"
             >
               <Mail className="group-hover:animate-bounce" />
               Hire Me
             </Button>
-            
+
             <Button
               variant="cosmic"
               size="lg"
-              onClick={() => onNavigate('projects')}
+              onClick={() => onNavigate("projects")}
               className="group"
             >
               View Projects
@@ -111,15 +116,11 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
                 →
               </motion.div>
             </Button>
-            
-            <Button
-              variant="glow"
-              size="lg"
-              onClick={() => onNavigate('resume')}
-              className="group"
-            >
-              <Download className="group-hover:animate-bounce" />
-              Resume
+            <Button variant="glow" size="lg" asChild className="group">
+              <a href="./src/assets/MyResume.pdf" target="_blank" rel="noopener noreferrer">
+                <Download className="group-hover:animate-bounce" />
+                Resume
+              </a>
             </Button>
           </motion.div>
 
@@ -131,8 +132,12 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             className="flex justify-center space-x-6"
           >
             {[
-              { icon: Github, href: 'https://github.com', label: 'GitHub' },
-              { icon: Linkedin, href: 'https://linkedin.com', label: 'LinkedIn' },
+              { icon: Github, href: "https://github.com/9342758154", label: "GitHub" },
+              {
+                icon: Linkedin,
+                href: "https://www.linkedin.com/in/muthu-krishnan-r-468b5a335/",
+                label: "LinkedIn",
+              },
             ].map(({ icon: Icon, href, label }) => (
               <motion.a
                 key={label}
@@ -148,25 +153,8 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
             ))}
           </motion.div>
 
-          {/* Scroll Indicator */}
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6, delay: 1.5 }}
-            className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-          >
-            <motion.div
-              animate={{ y: [0, 10, 0] }}
-              transition={{ repeat: Infinity, duration: 2 }}
-              className="w-6 h-10 border-2 border-primary rounded-full flex justify-center"
-            >
-              <motion.div
-                animate={{ y: [0, 16, 0] }}
-                transition={{ repeat: Infinity, duration: 2 }}
-                className="w-1 h-3 bg-primary rounded-full mt-2"
-              />
-            </motion.div>
-          </motion.div>
+         
+         
         </motion.div>
       </div>
     </section>

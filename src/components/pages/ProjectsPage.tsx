@@ -3,63 +3,46 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Github } from 'lucide-react';
+import { a } from 'node_modules/framer-motion/dist/types.d-Cjd591yU';
 
 export const ProjectsPage = () => {
   const projects = [
     {
       id: 1,
-      title: 'AI-Powered Task Manager',
-      description: 'A modern task management application with AI-powered suggestions and smart scheduling features.',
-      tech: ['React', 'TypeScript', 'Node.js', 'OpenAI API', 'PostgreSQL'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Secure Real-Time Chat Application',
+      description: 'Developed a real-time chat app with Django Channels and WebSocket.Integrated secure end-to-end encryption (XChaCha20-Poly1305),bcrypt-based user authentication, and MySQL for encrypted data storage.',
+      tech: ["ReactJS"," Django"," Django Channels", "WebSocket", "XChaCha20-Poly1305"],
       gradient: 'from-cosmic-purple to-cosmic-blue',
     },
     {
       id: 2,
-      title: 'E-commerce Dashboard',
-      description: 'Comprehensive analytics dashboard for e-commerce businesses with real-time data visualization.',
-      tech: ['React', 'D3.js', 'Express', 'MongoDB', 'Socket.io'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Flute(Music App)',
+      description: 'The main reason for developing a Flute app is to provide easy,on-demand access to music while offering a legal and monetized platform for artists,creators and the million of peoples stress buster. ',
+      tech: ['Figma','Miro','Sketch','Penpot','Adobe XD'],
       gradient: 'from-cosmic-cyan to-cosmic-blue',
     },
     {
       id: 3,
       title: '3D Portfolio Website',
       description: 'Interactive 3D portfolio website built with Three.js and React Three Fiber.',
-      tech: ['React', 'Three.js', 'Framer Motion', 'GLSL', 'WebGL'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      tech: ['React', 'Three.js', 'Framer Motion', 'React.js', 'Tailwind CSS'],
       gradient: 'from-cosmic-pink to-cosmic-purple',
     },
     {
       id: 4,
-      title: 'Real-time Chat Application',
-      description: 'Modern chat application with end-to-end encryption and file sharing capabilities.',
-      tech: ['React', 'Socket.io', 'Node.js', 'Redis', 'JWT'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Developer hub tool Website',
+      description: ' Developed for Software Developers to learn and implementation of Idea. ',
+      tech: ['HTML', 'CSS', 'JavaScript', ],
       gradient: 'from-cosmic-blue to-cosmic-cyan',
     },
     {
       id: 5,
-      title: 'Blockchain Voting System',
-      description: 'Decentralized voting platform built on Ethereum with smart contracts.',
-      tech: ['React', 'Solidity', 'Web3.js', 'Ethereum', 'MetaMask'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
+      title: 'Food Ordering Website - Foodies Corner',
+      description: 'Developed a responsive multi-page food ordering website with cart functionality, user auth, carousels, and social media links.',
+      tech: ['HTML', 'CSS', 'JavaScript'],
       gradient: 'from-cosmic-purple to-cosmic-pink',
     },
-    {
-      id: 6,
-      title: 'Weather Forecast App',
-      description: 'Beautiful weather application with advanced animations and location-based forecasts.',
-      tech: ['React Native', 'TypeScript', 'Weather API', 'Reanimated'],
-      liveUrl: 'https://example.com',
-      githubUrl: 'https://github.com',
-      gradient: 'from-cosmic-cyan to-cosmic-purple',
-    },
+   
   ];
 
   return (
@@ -125,14 +108,6 @@ export const ProjectsPage = () => {
                       className="flex-1 group/btn"
                       asChild
                     >
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink className="group-hover/btn:animate-bounce" size={16} />
-                        Live Demo
-                      </a>
                     </Button>
                     
                     <Button
@@ -141,14 +116,7 @@ export const ProjectsPage = () => {
                       className="flex-1 group/btn"
                       asChild
                     >
-                      <a
-                        href={project.githubUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github className="group-hover/btn:animate-spin" size={16} />
-                        Code
-                      </a>
+                
                     </Button>
                   </div>
                 </div>

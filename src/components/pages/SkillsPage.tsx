@@ -7,40 +7,43 @@ export const SkillsPage = () => {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React/Next.js', level: 95, color: 'from-cosmic-blue to-cosmic-cyan' },
+        { name: 'React.js', level: 95, color: 'from-cosmic-blue to-cosmic-cyan' },
         { name: 'TypeScript', level: 90, color: 'from-cosmic-purple to-cosmic-blue' },
         { name: 'JavaScript', level: 95, color: 'from-cosmic-cyan to-cosmic-purple' },
-        { name: 'HTML/CSS', level: 98, color: 'from-cosmic-pink to-cosmic-purple' },
+        { name: 'HTML', level: 98, color: 'from-cosmic-pink to-cosmic-purple' },
         { name: 'Tailwind CSS', level: 92, color: 'from-cosmic-blue to-cosmic-pink' },
+        { name: 'CSS', level: 98, color: 'from-cosmic-pink to-cosmic-purple' },
       ],
     },
     {
-      title: 'Backend & Database',
+      title: 'UI/UX Designer',
       skills: [
-        { name: 'Node.js', level: 85, color: 'from-cosmic-purple to-cosmic-cyan' },
-        { name: 'Python', level: 80, color: 'from-cosmic-blue to-cosmic-purple' },
-        { name: 'PostgreSQL', level: 88, color: 'from-cosmic-cyan to-cosmic-blue' },
-        { name: 'MongoDB', level: 85, color: 'from-cosmic-pink to-cosmic-cyan' },
-        { name: 'GraphQL', level: 75, color: 'from-cosmic-purple to-cosmic-pink' },
+        { name: 'Figma', level: 95, color: 'from-cosmic-purple to-cosmic-cyan' },
+        { name: 'Miro', level: 90, color: 'from-cosmic-blue to-cosmic-purple' },
+        { name: 'Penpot', level: 88, color: 'from-cosmic-cyan to-cosmic-blue' },
+        { name: 'Sketch up', level: 85, color: 'from-cosmic-pink to-cosmic-cyan' },
+        { name: 'Adobe XD', level: 80, color: 'from-cosmic-purple to-cosmic-pink' },
       ],
     },
     {
       title: 'Tools & Technologies',
       skills: [
+        { name: 'Figma', level: 90, color: 'from-cosmic-blue to-cosmic-cyan' },
         { name: 'Git/GitHub', level: 95, color: 'from-cosmic-blue to-cosmic-purple' },
-        { name: 'Docker', level: 80, color: 'from-cosmic-cyan to-cosmic-pink' },
-        { name: 'AWS/Cloud', level: 75, color: 'from-cosmic-purple to-cosmic-blue' },
-        { name: 'Jest/Testing', level: 85, color: 'from-cosmic-pink to-cosmic-purple' },
-        { name: 'Figma/Design', level: 90, color: 'from-cosmic-blue to-cosmic-cyan' },
+        { name: 'Framer Motion', level: 80, color: 'from-cosmic-cyan to-cosmic-pink' },
+        { name: 'Miro', level: 75, color: 'from-cosmic-purple to-cosmic-blue' },
+        { name: 'Sketch up', level: 85, color: 'from-cosmic-pink to-cosmic-purple' },
+       
       ],
     },
   ];
 
   const certifications = [
-    'AWS Certified Developer Associate',
-    'Google Cloud Professional Developer',
-    'Meta Frontend Developer Professional',
-    'Microsoft Azure Developer Associate',
+    'Completed Web Development internship at Samcore solution,Trichy from Aug 5 – Sep 5, 2024.',
+    'Presented a paper titled Development of E-Commerce Management and Policy in India at ICESTEM 24, Bharath Niketan Engineering College, April 2024.',
+    'Presented a paper titled "Secure Real-Time Chat Application Using Django and XChaCha20 (Poly-1305) Encryption"at ICESTEM 25, April 2025.',
+    'Completion of "UI/UX Design" Course-The course conducted by Ingage Technologies through Naan mudhalvan Scheme.',
+    'Completion of "High Performance computing" Course-The course conducted by HPC Trainer through Naan mudhalvan Scheme.'
   ];
 
   return (

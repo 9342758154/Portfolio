@@ -13,9 +13,7 @@ const navItems = [
   { id: 'about', label: 'About' },
   { id: 'projects', label: 'Projects' },
   { id: 'skills', label: 'Skills' },
-  { id: 'resume', label: 'Resume' },
   { id: 'contact', label: 'Contact' },
-  { id: 'social', label: 'Social' },
 ];
 
 export const Navigation = ({ currentPage, onNavigate }: NavigationProps) => {
