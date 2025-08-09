@@ -174,10 +174,10 @@ export const SkillsPage = () => {
           className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12"
         >
           {[
-            { number: '50+', label: 'Projects Completed' },
-            { number: '4+', label: 'Years Experience' },
-            { number: '15+', label: 'Technologies Mastered' },
-            { number: '100%', label: 'Client Satisfaction' },
+            { number: '5+', label: 'Projects Completed' },
+            { number: 'Fresher', label: 'Years Experience' },
+           
+            { number: '100%', label: 'Satisfaction' },
           ].map((stat, index) => (
             <Card key={stat.label} className="glass p-6 text-center hover-lift">
               <motion.div

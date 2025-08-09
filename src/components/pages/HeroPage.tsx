@@ -65,7 +65,7 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.7 }}
-              className="text-4xl md:text-6xl lg:text-6xl font-bold gradient-text"
+              className="text-4xl md:text-5xl lg:text-5xl font-bold gradient-text"
             >
               Muthu Krishnan R
             </motion.h1>
