@@ -5,7 +5,7 @@ import { Scene3D } from "@/components/3D/Scene3D";
 import { Download, Mail, Github, Linkedin } from "lucide-react";
 import heroImage from "@/assets/hero-cosmic.jpg";
 import profilePic from '@/assets/profile.jpg';
-import MyResume from "@/assets/MyResume.pdf";
+
 
 interface HeroPageProps {
   onNavigate: (page: string) => void;
@@ -117,12 +117,6 @@ export const HeroPage = ({ onNavigate }: HeroPageProps) => {
               >
                 →
               </motion.div>
-            </Button>
-            <Button variant="glow" size="lg" asChild className="group">
-            <a href={MyResume} target="_blank" rel="noopener noreferrer">
-                <Download className="group-hover:animate-bounce" />
-                Resume
-              </a>
             </Button>
           </motion.div>
 
